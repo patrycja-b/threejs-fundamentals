@@ -8,9 +8,9 @@ module.exports = {
   devServer: {
     contentBase: "./dist",
   },
-  //   module: {
-  //     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }],
-  //   },
+  module: {
+    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }],
+  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),

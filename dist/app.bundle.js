@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"hello\");\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log(\"hello\");\nconst a = 2;\nconsole.log(a);\nconst isBabel = !(class {}.toString().indexOf(\"class \") === 0);\nconsole.log(isBabel);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
