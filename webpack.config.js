@@ -9,7 +9,26 @@ module.exports = {
     contentBase: './dist',
   },
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }],
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+
+        options: {
+          emitWarning: true,
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+        },
+      },
+    ],
   },
   output: {
     filename: '[name].bundle.js',
