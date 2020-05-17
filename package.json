@@ -4,5 +4,14 @@
   "main": "index.js",
   "author": "Patrycja Batko",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
